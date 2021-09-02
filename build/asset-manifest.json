@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e337306b.chunk.css",
+    "main.js": "/static/js/main.76d4d214.chunk.js",
+    "main.js.map": "/static/js/main.76d4d214.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.542250e9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.542250e9.js.map",
+    "static/css/2.9d6df86f.chunk.css": "/static/css/2.9d6df86f.chunk.css",
+    "static/js/2.0732fd7c.chunk.js": "/static/js/2.0732fd7c.chunk.js",
+    "static/js/2.0732fd7c.chunk.js.map": "/static/js/2.0732fd7c.chunk.js.map",
+    "static/js/3.7e58258b.chunk.js": "/static/js/3.7e58258b.chunk.js",
+    "static/js/3.7e58258b.chunk.js.map": "/static/js/3.7e58258b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.9d6df86f.chunk.css.map": "/static/css/2.9d6df86f.chunk.css.map",
+    "static/css/main.e337306b.chunk.css.map": "/static/css/main.e337306b.chunk.css.map",
+    "static/js/2.0732fd7c.chunk.js.LICENSE.txt": "/static/js/2.0732fd7c.chunk.js.LICENSE.txt",
+    "static/media/NEDUET.d0287ad6.png": "/static/media/NEDUET.d0287ad6.png",
+    "static/media/Login.css": "/static/media/img.2a11e53e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.542250e9.js",
+    "static/css/2.9d6df86f.chunk.css",
+    "static/js/2.0732fd7c.chunk.js",
+    "static/css/main.e337306b.chunk.css",
+    "static/js/main.76d4d214.chunk.js"
+  ]
+}
