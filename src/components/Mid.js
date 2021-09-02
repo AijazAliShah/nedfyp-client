@@ -73,7 +73,7 @@ export class Mid extends Component {
 
   saveData() {
     axios
-      .post("http://localhost:3001/api/grade", {
+      .post("https://fyp-neduet-server.herokuapp.com/api/grade", {
         projectTitle: this.state.projectTitle,
         project_id: this.state.projectId,
         batch: this.state.batch,
@@ -101,7 +101,7 @@ export class Mid extends Component {
         if (this.state.eval_no !== "4") {
           for (let i = 13; i < 18; i++) {
             axios
-              .post("http://localhost:3001/api/criteria", {
+              .post("https://fyp-neduet-server.herokuapp.com/api/criteria", {
                 grade_id: resp.data.result.insertId,
                 marks1: this.state[`criteria${i}`].marks1,
                 marks2: this.state[`criteria${i}`].marks2,

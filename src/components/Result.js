@@ -181,12 +181,12 @@ export class Mid extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3001/api/grade/" + this.props.match.params.id)
+      .get("https://fyp-neduet-server.herokuapp.com/api/grade/" + this.props.match.params.id)
       .then((resp) => {
         this.setState({ gradeData: resp.data.result[0] });
         axios
           .get(
-            "http://localhost:3001/api/criteria/" +
+            "https://fyp-neduet-server.herokuapp.com/api/criteria/" +
             resp.data.result[0].project_id
           )
           .then((resp1) => {
@@ -790,7 +790,7 @@ export class Mid extends Component {
 
   saveWeightage() {
     axios
-      .post("http://localhost:3001/api/weightage", {
+      .post("https://fyp-neduet-server.herokuapp.com/api/weightage", {
         project_id: this.state.gradeData.project_id,
         weight1: this.state.weight1,
         weight2: this.state.weight2,

@@ -10,10 +10,10 @@ function Info() {
   const [templates, setTemplates] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/api/info").then((response) => {
+    Axios.get("https://fyp-neduet-server.herokuapp.com/api/info").then((response) => {
       setDataList(response.data);
     });
-    Axios.get("http://localhost:3001/api/templates").then((response) => {
+    Axios.get("https://fyp-neduet-server.herokuapp.com/api/templates").then((response) => {
       setTemplates(response.data);
     });
   }, []);

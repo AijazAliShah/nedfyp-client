@@ -74,7 +74,7 @@ const [description, setDescription] = useState("");*/
   let history = useHistory();
 
   const getData = () => {
-    Axios.get("http://localhost:3001/api/project").then((response) => {
+    Axios.get("https://fyp-neduet-server.herokuapp.com/api/project").then((response) => {
       console.log('response.data.result')
       console.log(response.data.result)
       setDataList(response.data.result);
@@ -85,7 +85,7 @@ const [description, setDescription] = useState("");*/
   }, []);
 
   const updateButton = (project_id) => {
-    Axios.put("http://localhost:3001/update", {
+    Axios.put("https://fyp-neduet-server.herokuapp.com/update", {
       title: newTitle,
       project_id: project_id,
     }).then((response) => {
@@ -110,7 +110,7 @@ const [description, setDescription] = useState("");*/
 
 
   const deleteButton = (project_id) => {
-    Axios.delete(`http://localhost:3001/delete/${project_id}`).then(
+    Axios.delete(`https://fyp-neduet-server.herokuapp.com/delete/${project_id}`).then(
       (response) => {
         var result = window.confirm("Are you sure to delete the record?");
         if (result) {
@@ -379,7 +379,7 @@ const [description, setDescription] = useState("");*/
           <h2 ref={(_subtitle) => (subtitle = _subtitle)} > <span style={{color:"#0b1442"}}>Are you Sure You Want To Delete?</span></h2>
           <br></br>
           <button  class="btn btn-primary" style={{ border: '1px solid blue',marginLeft:"20%" }} onClick={() => { 
-            Axios.post('http://localhost:3001/api/project/delete/'+val)
+            Axios.post('https://fyp-neduet-server.herokuapp.com/api/project/delete/'+val)
             .then(resp => {
               getData()
               closeModal()

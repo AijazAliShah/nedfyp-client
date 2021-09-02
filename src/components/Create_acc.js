@@ -22,7 +22,7 @@ function Create_acc() {
 
   const onSubmit = (data) => {
     console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
-    axios.post("http://localhost:3001/auth", data).then(() => {
+    axios.post("https://fyp-neduet-server.herokuapp.com/auth", data).then(() => {
       console.log(data);
     });
   };

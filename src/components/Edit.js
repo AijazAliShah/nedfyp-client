@@ -28,7 +28,7 @@ function Project() {
 
   const getData = async () => {
     await axios
-      .get("http://localhost:3001/api/project/one/" + id)
+      .get("https://fyp-neduet-server.herokuapp.com/api/project/one/" + id)
       .then((response) => {
         console.log(response.data.result);
         setProject(response.data.result[0]);
@@ -112,7 +112,7 @@ function Project() {
     console.log(External);
 
     axios
-      .post("http://localhost:3001/api/project/edit/"+project.project.project_id, {
+      .post("https://fyp-neduet-server.herokuapp.com/api/project/edit/"+project.project.project_id, {
         title: project.project.title,
         internal: project.project.internal,
         external: project.project.external,
@@ -122,7 +122,7 @@ function Project() {
         console.log(resp.data);
         for (let i = 0; i < project.stds.result.length; i++) {
           await axios
-            .post("http://localhost:3001/api/projectStd/edit/"+project.stds.result[i].id, {
+            .post("https://fyp-neduet-server.herokuapp.com/api/projectStd/edit/"+project.stds.result[i].id, {
               fullName: project.stds.result[i].fullName,
               rollNo: project.stds.result[i].rollNo,
               email: project.stds.result[i].email,

@@ -44,7 +44,7 @@ function Registration() {
         if (err) throw err;
         console.log(data1.smtpCheck);
         if (data1.smtpCheck === 'true') {
-          axios.post("http://localhost:3001/api/register", newData).then((resp) => {
+          axios.post("https://fyp-neduet-server.herokuapp.com/api/register", newData).then((resp) => {
             console.log(resp.data);
             if (resp.data.auth) {
               history.push("/");

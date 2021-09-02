@@ -117,7 +117,7 @@ export class Mid extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:3001/api/grade/'+this.props.match.params.id)
+    axios.get('https://fyp-neduet-server.herokuapp.com/api/grade/'+this.props.match.params.id)
     .then(resp => {
       this.setState({gradeData: resp.data.result[0]})
     })
@@ -132,7 +132,7 @@ export class Mid extends Component {
           end=13
         }
         for (let i = 1; i < end; i++) {
-          axios.post("http://localhost:3001/api/criteria", {
+          axios.post("https://fyp-neduet-server.herokuapp.com/api/criteria", {
             grade_id: this.props.match.params.id,
             marks1: this.state[`criteria${i}`].marks1,
             marks2: this.state[`criteria${i}`].marks2,

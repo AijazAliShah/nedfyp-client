@@ -48,7 +48,7 @@ function Front_page() {
     const isNav1 = reactLocalStorage.getObject("accessToken");
     setIsNav(isNav1)
     axios
-      .get("http://localhost:3001/auth/auth", {
+      .get("https://fyp-neduet-server.herokuapp.com/auth/auth", {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },

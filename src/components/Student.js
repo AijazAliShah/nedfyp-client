@@ -35,7 +35,7 @@ function Student() {
   }
   useEffect(() => {
     console.log('jhhhh')
-    axios.get(`http://localhost:3001/basicinfo/${id}`).then((response) => {
+    axios.get(`https://fyp-neduet-server.herokuapp.com/basicinfo/${id}`).then((response) => {
       //setName(response.data.name);
       // setEmail(response.data.email);
       console.log("response.data");

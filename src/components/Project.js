@@ -47,7 +47,7 @@ function Project() {
     console.log(External);
 
     axios
-      .post("http://localhost:3001/api/project", {
+      .post("https://fyp-neduet-server.herokuapp.com/api/project", {
         title,
         batch,
         internal: Internal,
@@ -57,7 +57,7 @@ function Project() {
         console.log(resp.data);
         for (let i = 0; i < inputList.length; i++) {
           axios
-            .post("http://localhost:3001/api/projectStd", {
+            .post("https://fyp-neduet-server.herokuapp.com/api/projectStd", {
               fullName: inputList[i].firstName,
               rollNo: inputList[i].roll_no,
               email: inputList[i].email,

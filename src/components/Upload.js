@@ -59,7 +59,7 @@ class Upload extends Component {
 
         snapshot.ref.getDownloadURL().then((downloadURL) => {
           console.log("File available at", downloadURL);
-          axios.post('http://localhost:3001/api/templates/edit', {
+          axios.post('https://fyp-neduet-server.herokuapp.com/api/templates/edit', {
             name:fullname,
             url:downloadURL,
           }).then(resp => {
@@ -74,7 +74,7 @@ class Upload extends Component {
       });
     } else if (this.state.isStd.result[0].type === "student") {
       axios
-        .post("http://localhost:3001/api/progress", {
+        .post("https://fyp-neduet-server.herokuapp.com/api/progress", {
           userName: this.state.userName,
           userEmail: this.state.userEmail,
           supEmail: this.state.supEmail,
@@ -99,7 +99,7 @@ class Upload extends Component {
             snapshot.ref.getDownloadURL().then((downloadURL) => {
               console.log("File available at", downloadURL);
               axios
-                .post("http://localhost:3001/api/progress/edit/" + id, {
+                .post("https://fyp-neduet-server.herokuapp.com/api/progress/edit/" + id, {
                   reportUrl: downloadURL,
                 })
                 .then((resp1) => {

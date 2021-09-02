@@ -38,7 +38,7 @@ function Registration() {
     const newData = data;
     if (newData.password === newData.ccpassword) {
       axios
-        .post("http://localhost:3001/api/reset/password", newData)
+        .post("https://fyp-neduet-server.herokuapp.com/api/reset/password", newData)
         .then((resp) => {
           console.log(resp.data);
           if (resp.data.auth) {

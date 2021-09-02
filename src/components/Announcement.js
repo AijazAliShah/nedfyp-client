@@ -23,7 +23,7 @@ function AddAnnouncement() {
   console.log(isNav);
   //insert project details function
   const add = () => {
-    Axios.post("http://localhost:3001/api/announcement", {
+    Axios.post("https://fyp-neduet-server.herokuapp.com/api/announcement", {
       activity: activity,
       tentativeDate: tentativeDate,
       responsibility: responsibility,

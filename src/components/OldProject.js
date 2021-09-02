@@ -14,7 +14,7 @@ function AddInput() {
 
 
   useEffect(()=> {
-    Axios.get("http://localhost:3001/api/get").then((response)=> {
+    Axios.get("https://fyp-neduet-server.herokuapp.com/api/get").then((response)=> {
     setDataList(response.data);
     });
 
@@ -22,7 +22,7 @@ function AddInput() {
 
  //insert project details function
   const submitProject =() => {
-    Axios.post("http://localhost:3001/api/insert_project", {
+    Axios.post("https://fyp-neduet-server.herokuapp.com/api/insert_project", {
         title: title, 
         internal: internal,
         external: external });

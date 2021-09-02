@@ -37,7 +37,7 @@ function Registration() {
     console.log(data)
 
         const email = data.email;
-        axios.get('http://localhost:3001/forgot/password/'+email)
+        axios.get('https://fyp-neduet-server.herokuapp.com/forgot/password/'+email)
         .then(resp => {
           toast("Email is sent to your email address!", {
             position: "top-center",

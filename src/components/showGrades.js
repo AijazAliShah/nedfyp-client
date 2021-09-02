@@ -25,7 +25,7 @@ const [description, setDescription] = useState("");*/
   let history = useHistory();
 
   const getData = () => {
-    Axios.get("http://localhost:3001/api/grade").then((response) => {
+    Axios.get("https://fyp-neduet-server.herokuapp.com/api/grade").then((response) => {
       console.log(response.data.result)
       setDataList(response.data.result);
     });

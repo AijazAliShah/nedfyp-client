@@ -18,7 +18,7 @@ export class Mid extends Component {
     console.log(isNav);
 
     axios
-      .get("http://localhost:3001/api/progress")
+      .get("https://fyp-neduet-server.herokuapp.com/api/progress")
       .then((resp) => {
         console.log(resp.data, isNav.result[0].email);
         const temp = resp.data.result.filter(

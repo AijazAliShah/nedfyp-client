@@ -21,7 +21,7 @@ function Login() {
     console.log(email, password);
 
     const data = { email: email, password: password };
-    axios.post("http://localhost:3001/api/login", data).then((response) => {
+    axios.post("https://fyp-neduet-server.herokuapp.com/api/login", data).then((response) => {
       if (response.data.error) {
         toast(response.data.error, {
           position: "top-center",

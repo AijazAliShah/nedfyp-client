@@ -19,7 +19,7 @@ function AddInput() {
   let { id } = useParams();
 
 
-  useEffect(() => {Axios.get(`http://localhost:3001/editproject/${id}`).then((response) => {
+  useEffect(() => {Axios.get(`https://fyp-neduet-server.herokuapp.com/editproject/${id}`).then((response) => {
           setTitle(response.data.Title);
           setStudent(response.data.Student);
           setEmail(response.data.Email);
@@ -37,7 +37,7 @@ function AddInput() {
  
 
 const updateButton = (project_id) => {
-    Axios.put("http://localhost:3001/update", { title: newTitle, project_id: project_id }).then(
+    Axios.put("https://fyp-neduet-server.herokuapp.com/update", { title: newTitle, project_id: project_id }).then(
       (response) => {
         setDataList(
           dataList.map((val) => {

@@ -31,7 +31,7 @@ function Registration() {
     const newData = data;
     newData.email = Buffer.from(email, 'base64').toString('ascii');
     if (newData.password === newData.cpassword) {
-      axios.post("http://localhost:3001/api/change/password", newData).then((resp) => {
+      axios.post("https://fyp-neduet-server.herokuapp.com/api/change/password", newData).then((resp) => {
         console.log(resp.data);
         if (resp.data.auth) {
           history.push("/");
