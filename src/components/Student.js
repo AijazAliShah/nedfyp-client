@@ -44,7 +44,8 @@ function Student() {
       if (isEmpty(isNav1)) {
         window.location.href = '/'
       }
-    });
+    }).catch(err => console.log(err))
+    ;
 
   }, []);
   function isEmpty(obj) {

@@ -44,23 +44,23 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function Front_page() {
   const [authState, setAuthState] = useState(false);
   const [isNav, setIsNav] = useState({})
-  useEffect(() => {
-    const isNav1 = reactLocalStorage.getObject("accessToken");
-    setIsNav(isNav1)
-    axios
-      .get("https://fyp-neduet-server.herokuapp.com/auth/auth", {
-        headers: {
-          accessToken: localStorage.getItem("accessToken"),
-        },
-      })
-      .then((response) => {
-        if (response.data.error) {
-          setAuthState(false);
-        } else {
-          setAuthState(true);
-        }
-      });
-  }, []);
+  // useEffect(() => {
+  //   const isNav1 = reactLocalStorage.getObject("accessToken");
+  //   setIsNav(isNav1)
+  //   axios
+  //     .get("https://fyp-neduet-server.herokuapp.com/auth/auth", {
+  //       headers: {
+  //         accessToken: localStorage.getItem("accessToken"),
+  //       },
+  //     })
+  //     .then((response) => {
+  //       if (response.data.error) {
+  //         setAuthState(false);
+  //       } else {
+  //         setAuthState(true);
+  //       }
+  //     });
+  // }, []);
 
   function isEmpty(obj) {
     for (var prop in obj) {
