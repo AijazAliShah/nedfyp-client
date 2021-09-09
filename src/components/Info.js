@@ -11,9 +11,11 @@ function Info() {
 
   useEffect(() => {
     Axios.get("https://fyp-neduet-server.herokuapp.com/api/info").then((response) => {
+      console.log(response.data);
       setDataList(response.data);
     });
     Axios.get("https://fyp-neduet-server.herokuapp.com/api/templates").then((response) => {
+      console.log(response.data);
       setTemplates(response.data);
     });
   }, []);
